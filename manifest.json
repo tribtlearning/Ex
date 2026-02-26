@@ -1,0 +1,26 @@
+{
+   "action": {
+      "default_icon": {
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "libs/xlsx.full.min.js", "libs/papaparse.min.js", "libs/pdf.js", "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Hỗ trợ import đáp án & highlight tự động.",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+am9Uo9ojdue+ahmIJA16xcGwpPJPxzkEnGb2xGr9HhYkuO1atpMJ1wp9H9Nnkqy7unWlMpIFtkw2P5PWiJJElxafQq0NZaYE8K+QiMTvviSgdghNknuBKJ7ZliMWsEIScJLTta92lchwENIpfc47lYbSWOFYLAhYaYe5HheSdeBKjQxEZgE+pzDG/kLqA0XV2umg5n/x5y+QhMX0L73sFVlb7kULJMLqtaBZCBl4DD/n1j/yR/5Nl1Bn9lLNzJ1BKegXSsOPSsjhNlEbdUCAXueqOIWSV3lGu2Ykajel2TlYQ5EeTTwL8S3LxNZ2L5KBoOHciCWXNbjUmJiRJNjQIDAQAB",
+   "manifest_version": 3,
+   "name": "Trợ lý Học tập HG",
+   "permissions": [ "storage", "activeTab", "scripting" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "3.3",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "libs/pdf.worker.js", "template/template_import.xlsx" ]
+   } ]
+}

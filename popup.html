@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>RDI Assistant</title>
+<style>
+body { font-family: Arial; width: 300px; padding: 10px; }
+h2 { font-size: 16px; margin: 5px 0; }
+input { width: calc(100% - 20px); padding: 6px; margin-bottom: 5px; }
+button { width: 100%; padding: 8px; margin-bottom: 5px; cursor: pointer; }
+ul { list-style: none; padding-left: 0; max-height: 100px; overflow-y: auto; }
+li { padding: 4px 0; display: flex; justify-content: space-between; }
+li button { width: auto; padding: 2px 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<h2>Domain được phép:</h2>
+<input type="text" id="domain-input" placeholder="Nhập domain...">
+<button id="add-domain-btn">Thêm domain</button>
+<ul id="domain-list"></ul>
+<h2>License / Trial:</h2>
+<div id="license-status"></div>
+</body>
+<script src="popup.js"></script>
+</html>
